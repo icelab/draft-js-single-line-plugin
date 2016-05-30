@@ -46,6 +46,7 @@ There’s only one option so far: `stripEntities: true/false`.
 ## Developing
 
 ```
+npm install
 npm install react react-dom draft-js
 npm run test
 ```
