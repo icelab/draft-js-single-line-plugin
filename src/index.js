@@ -6,6 +6,8 @@ import {
   genKey,
 } from 'draft-js'
 
+import isSoftNewlineEvent from 'draft-js/lib/isSoftNewlineEvent'
+
 import {
   NEWLINE_REGEX,
   replaceNewlines,
@@ -66,11 +68,12 @@ function singleLinePlugin (options = {}) {
         let contentBlock = blocks[0]
         let text = contentBlock.getText()
         let characterList = contentBlock.getCharacterList()
+        const isNewLine = (options.stripNewlines && NEWLINE_REGEX.test(text));
 
-        if (NEWLINE_REGEX.test(text) || characterListhasEntities(characterList)) {
+        if ( isNewLine || characterListhasEntities(characterList) ) {
           // Replace the text stripped of its newlines. Note that we replace
           // one '\n' with one ' ' so we don't need to modify the characterList
-          if (options.stripNewlines === true) {
+          if (options.stripNewlines) {
             text = replaceNewlines(text)
           }
 
@@ -89,7 +92,6 @@ function singleLinePlugin (options = {}) {
           })
 
           // Update the editor state with the compressed version
-          // const selection = editorState.getSelection()
           const newContentState = ContentState.createFromBlockArray([contentBlock])
 
           // Create the new state as an undoable action
