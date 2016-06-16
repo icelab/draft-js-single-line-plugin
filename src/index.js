@@ -20,6 +20,7 @@ import {
  */
 const defaultOptions = {
   stripEntities: true,
+  stripNewlines: true,
 }
 
 /**
@@ -69,7 +70,9 @@ function singleLinePlugin (options = {}) {
         if (NEWLINE_REGEX.test(text) || characterListhasEntities(characterList)) {
           // Replace the text stripped of its newlines. Note that we replace
           // one '\n' with one ' ' so we don't need to modify the characterList
-          text = replaceNewlines(text)
+          if (options.stripNewlines === true) {
+            text = replaceNewlines(text)
+          }
 
           // Strip entities?
           if (options.stripEntities) {
