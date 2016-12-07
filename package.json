@@ -2,7 +2,7 @@
   "name": "draft-js-single-line-plugin",
   "version": "0.0.2",
   "description": "Restrict a draft-js editor to a single line of input.",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "babel src --out-dir dist",
     "compile": "npm run build",
