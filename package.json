@@ -4,13 +4,12 @@
   "description": "Restrict a draft-js editor to a single line of input.",
   "main": "lib/index.js",
   "scripts": {
-    "build": "babel src --out-dir lib",
+    "build": "babel src --out-dir dist",
     "compile": "npm run build",
     "precompile": "npm run clean",
-    "prepublish": "npm run compile",
     "test": "NODE_ENV=test babel-node test | faucet",
     "posttest": "npm run lint",
-    "clean": "rm -rf ./lib/*",
+    "clean": "rm -rf ./dist/*",
     "lint": "eslint 'src/*.js' 'src/**/*.js'; exit 0"
   },
   "repository": {
