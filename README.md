@@ -36,12 +36,28 @@ You can pass options to the plugin as you call it:
 
 ```js
 const options = {
-  stripEntities: false
+  stripEntities: false,
+  stripNewlines: false,
 }
 const singleLinePlugin = createSingleLinePlugin(options)
 ```
 
-There’s only one option so far: `stripEntities: true/false`.
+### stripEntities
+
+Strip Entities from text.
+
+Type: `boolean` <br>
+Default: `true` <br>
+Options: `true` | `false`
+
+### stripNewlines
+
+Strip newline characters `\n` from text.
+
+Type: `boolean` <br>
+Default: `true` <br>
+Options: `true` | `false`
+
 
 ## Developing
 
