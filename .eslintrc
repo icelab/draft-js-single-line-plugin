@@ -1,16 +1,16 @@
 {
-  extends: [
+  "extends": [
     "standard",
   ],
-  rules: {
+  "rules": {
     "comma-dangle": [2, "always-multiline"]
   },
-  parserOptions: {
-    ecmaVersion: 6,
-    sourceType: "module",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
   },
-  plugins: [
-    "standard",
+  "plugins": [
+    "standard"
   ]
 }
 

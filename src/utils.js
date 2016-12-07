@@ -41,7 +41,7 @@ export function condenseBlocks (editorState, blocks, options) {
       if (options.stripNewlines) {
         text = text.push(replaceNewlines(block.getText()))
       } else {
-        text = text.push(block.getText());
+        text = text.push(block.getText())
       }
       characterList = characterList.concat(block.getCharacterList())
     }
