@@ -1,6 +1,6 @@
 {
   "name": "draft-js-single-line-plugin",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Restrict a draft-js editor to a single line of input.",
   "main": "lib/index.js",
   "scripts": {
@@ -48,6 +48,6 @@
     "tape": "4.5.1"
   },
   "dependencies": {
-    "immutable": "3.8.1"
+    "immutable": "^3.8.1"
   }
 }
