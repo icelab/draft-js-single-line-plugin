@@ -102,10 +102,10 @@ function singleLinePlugin (options = {}) {
      * Stop new lines being inserted by always handling the return
      *
      * @param  {KeyboardEvent} e Synthetic keyboard event from draftjs
-     * @return {Boolean} Did we handle the return or not? (pro-trip: yes, we did)
+     * @return {string} Did we handle the return or not? (pro-trip: yes, we did)
      */
     handleReturn (e) {
-      return true
+      return `handled`
     },
   }
 }
