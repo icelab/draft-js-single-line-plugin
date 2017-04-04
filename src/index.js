@@ -65,8 +65,9 @@ function singleLinePlugin (options = {}) {
         let contentBlock = blocks[0]
         let text = contentBlock.getText()
         let characterList = contentBlock.getCharacterList()
+        let hasEntitiesToStrip = options.stripEntities && characterListhasEntities(characterList)
 
-        if (NEWLINE_REGEX.test(text) || characterListhasEntities(characterList)) {
+        if (NEWLINE_REGEX.test(text) || hasEntitiesToStrip) {
           // Replace the text stripped of its newlines. Note that we replace
           // one '\n' with one ' ' so we don't need to modify the characterList
           text = replaceNewlines(text)
@@ -91,7 +92,6 @@ function singleLinePlugin (options = {}) {
 
           // Create the new state as an undoable action
           editorState = EditorState.push(editorState, newContentState, 'insert-characters')
-          editorState = EditorState.moveFocusToEnd(editorState)
         }
       }
 
