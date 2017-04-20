@@ -105,7 +105,7 @@ function singleLinePlugin (options = {}) {
      * @return {String} Did we handle the return or not? (pro-trip: yes, we did)
      */
     handleReturn (e) {
-      return "handled"
+      return 'handled'
     },
   }
 }
