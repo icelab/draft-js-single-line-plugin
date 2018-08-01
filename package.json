@@ -48,6 +48,6 @@
     "tape": "4.5.1"
   },
   "dependencies": {
-    "immutable": "^3.8.1"
+    "immutable": "~3.7.4"
   }
 }
