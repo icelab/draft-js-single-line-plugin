@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+# v2.0.3 2019-06-24
+
+* Update immutable dependency
+
 # v2.0.2 2018-08-01
 
 * Match draft-js range for immutable dependency
