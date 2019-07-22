@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+# v2.0.4 2019-07-22
+
+* Add ESM entry point — [thanks to @trysound](https://github.com/icelab/draft-js-single-line-plugin/pull/6)
+
 # v2.0.3 2019-06-24
 
 * Update immutable dependency
