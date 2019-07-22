@@ -1,13 +1,23 @@
 {
   "env": {
+    "cjs": {
+      "presets": [
+        "babel-preset-env"
+      ]
+    },
+    "esm": {
+      "presets": [
+        ["babel-preset-env", { "modules": false }]
+      ]
+    },
     "development": {
       "presets": [
-        "babel-preset-es2015"
+        "babel-preset-env"
       ]
     },
     "test": {
       "presets": [
-        "babel-preset-es2015"
+        "babel-preset-env"
       ]
     }
   }

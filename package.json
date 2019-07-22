@@ -3,9 +3,11 @@
   "version": "2.0.3",
   "description": "Restrict a draft-js editor to a single line of input.",
   "main": "lib/index.js",
+  "module": "esm/index.js",
   "scripts": {
-    "build": "babel src --out-dir lib",
-    "compile": "npm run build",
+    "build:cjs": "NODE_ENV=cjs babel src --out-dir lib",
+    "build:esm": "NODE_ENV=esm babel src --out-dir esm",
+    "compile": "npm run build:cjs && npm run build:esm",
     "precompile": "npm run clean",
     "prepublish": "npm run compile",
     "test": "NODE_ENV=test babel-node test | faucet",
@@ -38,13 +40,16 @@
   },
   "devDependencies": {
     "babel-cli": "6.7.5",
-    "babel-preset-es2015": "6.6.0",
+    "babel-preset-env": "^1.7.0",
+    "draft-js": ">=0.7.0",
     "eslint": "2.8.0",
     "eslint-config-standard": "5.1.0",
     "eslint-plugin-promise": "1.3.1",
     "eslint-plugin-standard": "1.3.2",
     "faucet": "0.0.1",
     "is-function": "1.0.1",
+    "react": ">=15.0.0",
+    "react-dom": ">=15.0.0",
     "tape": "4.5.1"
   },
   "dependencies": {
